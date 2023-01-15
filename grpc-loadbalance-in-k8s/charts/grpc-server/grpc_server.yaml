@@ -14,8 +14,6 @@ spec:
       labels:
         app: go-grpc-greeter-server
     spec:
-      imagePullSecrets:
-      - name: regcred
       containers:
       - image: grpc-server:latest
         resources:
@@ -57,3 +55,4 @@ spec:
       services:
         - name: "go-grpc-greeter-server"
           port: 50051
+          scheme: h2c
