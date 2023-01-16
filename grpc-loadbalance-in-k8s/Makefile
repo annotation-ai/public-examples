@@ -7,9 +7,9 @@ cluster:
 tunnel:
 	minikube tunnel -p $(PROFILE_NAME)
 
-grpc-example:
-	docker build -t grpc-server:latest -f grpc-server/Dockerfile .
-	minikube image load grpc-server:latest -p $(PROFILE_NAME)
+.PHONY: grpc-server
+grpc-server:
+	minikube image build -t grpc-server:latest -f grpc-server/Dockerfile . -p $(PROFILE_NAME)
 	kubectl apply -f charts/grpc-server/grpc_server.yaml
 
 traefik:
@@ -17,6 +17,9 @@ traefik:
 	helm dependency build charts/traefik
 	helm install traefik charts/traefik
 
-request:
-	pass
+request-to-l7:
+	grpc-client/grpc-client -addr localhost:50051
+
+request-to-l4:
+	grpc-client/grpc-client -addr localhost:50052
 
