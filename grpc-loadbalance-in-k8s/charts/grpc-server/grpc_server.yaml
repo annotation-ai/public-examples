@@ -16,6 +16,7 @@ spec:
     spec:
       containers:
       - image: grpc-server:latest
+        imagePullPolicy: Never
         resources:
           limits:
             cpu: 100m
