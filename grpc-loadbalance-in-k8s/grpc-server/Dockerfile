@@ -7,7 +7,7 @@ RUN  go mod init greeter-server && \
   go mod tidy && \
   go build -o /greeter-server main.go
 
-FROM gcr.io/distroless/base-debian10
+FROM ubuntu:20.04
 
 COPY --from=build /greeter-server /
 
