@@ -6,6 +6,7 @@ This example is for
 - Install [Minikube](https://minikube.sigs.k8s.io/docs/start/)
 - Install [Helm](https://helm.sh/docs/intro/install/)
 - Install kubectl([Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)/ [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/) / [MacOS](https://kubernetes.io/docs/tasks/tools/install-kubectl-macos/))
+- Install [go](https://go.dev/dl/)
 
 ## Setup
 
