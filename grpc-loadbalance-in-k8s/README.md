@@ -80,7 +80,7 @@ l4-go-grpc-greeter-server   LoadBalancer   10.102.165.112   127.0.0.1     50052:
 traefik                     LoadBalancer   10.102.18.230    127.0.0.1     50051:32488/TCP   3h36m
 ```
 
-`go-grpc-greeter-server` is L7 load balancer and `l4-go-grpc-greeter-server` is L4 load balancer.
+`traefik` is L7 load balancer and `l4-go-grpc-greeter-server` is L4 load balancer.
 
 
 ## Request
