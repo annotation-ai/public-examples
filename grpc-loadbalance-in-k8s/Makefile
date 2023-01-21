@@ -18,8 +18,8 @@ traefik:
 	helm install traefik charts/traefik
 
 request-to-l7:
-	grpc-client/grpc-client -addr localhost:50051
+	cd grpc-client && go run main.go -addr localhost:50051
 
 request-to-l4:
-	grpc-client/grpc-client -addr localhost:50052
+	cd grpc-client && go run grpc-client/main.go -addr localhost:50052
 
