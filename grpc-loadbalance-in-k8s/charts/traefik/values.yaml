@@ -1,0 +1,13 @@
+traefik:
+  deployment:
+    replicas: 1
+  ports:
+    grpc:
+      port: 50051
+      exposedPort: 50051
+      expose: true
+      protocol: TCP
+    websecure:
+      expose: false
+    web:
+      expose: false
